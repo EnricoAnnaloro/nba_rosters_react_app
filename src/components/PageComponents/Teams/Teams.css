@@ -1,0 +1,14 @@
+.TeamsPage{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.TeamsPage .Teams{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 60%;
+    border: 1px solid blue ;
+    display: flex;
+    justify-content: space-around;
+}

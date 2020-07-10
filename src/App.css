@@ -1,0 +1,10 @@
+.App{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App nav{
+  height: 7vh;
+  background-color: black;
+}
