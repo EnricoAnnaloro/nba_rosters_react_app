@@ -1,14 +1,29 @@
 .TeamsPage{
     width: 100%;
     margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
+    background: linear-gradient(90deg, rgba(254,127,45,1) 0%, rgba(65,65,221,1) 50%, rgba(97,155,138,1) 100%);
 }
 
 .TeamsPage .Teams{
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     width: 60%;
-    border: 1px solid blue ;
-    display: flex;
+    display: block;
     justify-content: space-around;
+}
+
+@media (min-width: 1200px){
+    .TeamsPage .Teams{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Teams .col{
+        flex: 1;
+        margin: 0 20px;
+    }
 }

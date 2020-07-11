@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
+import LAimage from '../../../../assets/images/LA.png'
 import './Team.css'
 
 const Roster = ( props ) => {
     return (
-        <div className="Team">
-            <h2>Team Name</h2>
-            <p>Image Here</p>
-            <p>Seed</p>
-        </div>
+        <Fragment>
+            <div className="Team">
+                <div className="TeamLogo">
+                    <img src={LAimage}></img>
+                </div>
+                <div className="TeamName">
+                    <p>TeamName</p>
+                </div>
+                <div className="TeamSeed">
+                    <p>TeamSeed</p>
+                </div>
+            </div>
+        </Fragment>
     );
 }
 
