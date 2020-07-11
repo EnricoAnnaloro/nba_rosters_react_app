@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          This is the nav
+          <p className="Title"><span>N B A</span>ROSTERS</p>
         </nav>
         <Teams />
       </div>

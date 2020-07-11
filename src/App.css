@@ -7,4 +7,38 @@
 .App nav{
   height: 7vh;
   background-color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.App nav .Title{
+  color: orange;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.App nav .Title span{
+  margin-right: 30px;
+}
+
+@media(min-width: 500px){
+  .App nav .Title{
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  .App nav .Title{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px){
+  .App nav .Title{
+    font-size: 50px;
+  }
+}
+

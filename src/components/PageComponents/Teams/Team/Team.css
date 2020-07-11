@@ -22,13 +22,14 @@
     border-radius: 40px;
     object-fit: cover;
     opacity: 0.35;
+    transition: 0.5s;
 }
 
 .Team .TeamName {
     text-align: center;
     color: white;
     border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
+    font-family: 'Exo', sans-serif;
     font-weight: bold;
     font-size: 30px;
     margin-top: -100px;
@@ -95,6 +96,7 @@
 }
 
 @media (min-width: 1200px){
+
 }
 
 
