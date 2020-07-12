@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
+import {Link} from 'react-router-dom'
 
 import Team from './Team/Team'
 
@@ -21,6 +22,10 @@ class Teams extends Component {
                 const teamsResponse = responses[0];
                 const statsResponse = responses[1];
 
+                console.log(statsResponse.data)
+                statsResponse.data.sort((a, b) => {return a['Percentage'] - b['Percentage']});
+                statsResponse.data.reverse();
+
                 this.setState({teams: teamsResponse.data, stats: statsResponse.data})
             }))
             .catch ( errors => {
@@ -34,14 +39,13 @@ class Teams extends Component {
 
         const easternTeams = this.state.stats.map( teamStats => {
 
-            console.log(Eseed);
-
             if(teamStats['Conference'] === "Eastern"){
                 const team = this.state.teams.find( toFind => toFind['TeamID'] === teamStats['TeamID'] );
                 const teamSeed = Eseed;
                 Eseed = Eseed + 1;
+                const link = team['Key'] + "?col1=" + team['PrimaryColor'] + "&col2=" + team['SecondaryColor'];
 
-                return( <Team className="child" key={team['TeamID']} team={team} stats={teamStats} seed={teamSeed}/>)
+                return( <Link to={link} style={{ textDecoration: 'none' }} key={team['TeamID']}><Team className="child" team={team} stats={teamStats} seed={teamSeed} /></Link>)
             }
 
             return null;
@@ -51,14 +55,13 @@ class Teams extends Component {
 
         const westernTeams = this.state.stats.map( teamStats => {
 
-            console.log(Wseed);
-
             if(teamStats['Conference'] === "Western"){
                 const team = this.state.teams.find( toFind => toFind['TeamID'] === teamStats['TeamID'] );
                 const teamSeed = Wseed;
                 Wseed = Wseed + 1;
+                const link = team['Key'] + "?col1=" + team['PrimaryColor'] + "&col2=" + team['SecondaryColor'];
 
-                return( <Team className="child" key={team['TeamID']} team={team} stats={teamStats} seed={teamSeed}/>)
+                return( <Link to={link} style={{ textDecoration: 'none' }} key={team['TeamID']}><Team className="child" team={team} stats={teamStats} seed={teamSeed} /></Link>)
             }
 
             return null;
