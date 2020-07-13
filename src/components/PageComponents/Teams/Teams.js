@@ -22,7 +22,6 @@ class Teams extends Component {
                 const teamsResponse = responses[0];
                 const statsResponse = responses[1];
 
-                console.log(statsResponse.data)
                 statsResponse.data.sort((a, b) => {return a['Percentage'] - b['Percentage']});
                 statsResponse.data.reverse();
 
@@ -43,7 +42,7 @@ class Teams extends Component {
                 const team = this.state.teams.find( toFind => toFind['TeamID'] === teamStats['TeamID'] );
                 const teamSeed = Eseed;
                 Eseed = Eseed + 1;
-                const link = team['Key'] + "?col1=" + team['PrimaryColor'] + "&col2=" + team['SecondaryColor'];
+                const link = team['Key'];
 
                 return( <Link to={link} style={{ textDecoration: 'none' }} key={team['TeamID']}><Team className="child" team={team} stats={teamStats} seed={teamSeed} /></Link>)
             }
@@ -59,7 +58,7 @@ class Teams extends Component {
                 const team = this.state.teams.find( toFind => toFind['TeamID'] === teamStats['TeamID'] );
                 const teamSeed = Wseed;
                 Wseed = Wseed + 1;
-                const link = team['Key'] + "?col1=" + team['PrimaryColor'] + "&col2=" + team['SecondaryColor'];
+                const link = team['Key'];
 
                 return( <Link to={link} style={{ textDecoration: 'none' }} key={team['TeamID']}><Team className="child" team={team} stats={teamStats} seed={teamSeed} /></Link>)
             }

@@ -12,9 +12,17 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <nav>
-            <Link to="/">
+            <div>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <i className="fas fa-home"></i>
+              </Link>
+            </div>
+            <div>
               <p className="Title"><span>N B A</span>ROSTERS</p>
-            </Link>
+            </div>
+            <div>
+
+            </div>
           </nav>
           <Route path="/:teamName" component={Roster} />    
           <Route path="/" exact component={Teams} />
