@@ -35,6 +35,8 @@ class Roster extends Component {
     }
     
     render() {
+
+        console.log(this.state.roster);
                 
         const backgroundStyle = this.setUpBackgroundStyle();
 

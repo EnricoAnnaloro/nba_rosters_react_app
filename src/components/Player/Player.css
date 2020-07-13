@@ -5,6 +5,7 @@
     padding: 0;
     width: 200px;
     height: 300px;
+    border-radius: 10%;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     cursor: pointer;
     transition: 0.4s;
@@ -15,6 +16,7 @@
     width: 500px;
     height: 600px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 10%;
     margin: 10px auto;
     cursor: pointer;
     transition: 0.4s;
@@ -46,6 +48,7 @@ box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 0px -5px 30px 15px rgba(0,0,0,0.
 position: absolute;
 width: 100%;
 height: 100%;
+border-radius: 10%;
 -webkit-backface-visibility: hidden; /* Safari */
 backface-visibility: hidden;
 }
@@ -66,7 +69,6 @@ transform: rotateY(180deg);
 .CardFront img{
 width: inherit;
 height: inherit;
-border-radius: 40px;
 object-fit: cover;
 opacity: 0.35;
 transition: 0.5s;
@@ -87,5 +89,12 @@ transition: 0.5s;
     .PlayerCardShow{
         width: 400px;
         height: 500px;
+    }
+
+    .CardFront img{
+        width: inherit;
+        padding: 20px 0;
+        height: 250px;
+        object-fit: contain;
     }
 }

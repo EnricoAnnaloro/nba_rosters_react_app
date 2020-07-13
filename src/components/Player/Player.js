@@ -21,13 +21,14 @@ class Player extends Component {
             cardStyle = "PlayerCardShow"
         }
 
-        console.log(this.props);
-
         return (
             <div className={cardStyle} onClick={this.rotateHandler}> 
                 <div className={contentStyle}>
                     <div className="CardFront">
                         <img src={this.props.info['PhotoUrl']} alt="Avatar"></img>
+                        <div>
+                            <h2>{this.props.info['DraftKingsName']}</h2>
+                        </div>
                     </div>
                     <div className="CardBack">
                         <h1>John Doe</h1>
