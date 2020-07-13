@@ -11,7 +11,7 @@
 }
 
 .RosterPage .Roster .col{
-    width: 30%;
+    width: 100%;
     margin: 20px 0;
 }
 
@@ -20,5 +20,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .RosterPage .Roster .col{
+        width: 30%;
+        margin: 20px 0;
     }
 }

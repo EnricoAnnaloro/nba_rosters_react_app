@@ -1,7 +1,7 @@
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .PlayerCard {
     background-color: transparent;
-    margin: auto;
+    margin: 15px auto;
     padding: 0;
     width: 200px;
     height: 300px;
@@ -43,6 +43,11 @@ transform: scale(0.9, 0.9);
 box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 0px -5px 30px 15px rgba(0,0,0,0.22);
 }
 
+.PlayerCardShow:hover{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 0px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
 /* Position the front and back side */
 .CardFront, .CardBack {
 position: absolute;
@@ -61,21 +66,51 @@ color: black;
 
 /* Style the back side */
 .CardBack {
-background-color: dodgerblue;
-color: white;
+background-color: #bbb;
+color: black;
 transform: rotateY(180deg);
 }
 
 .CardFront img{
 width: inherit;
-height: inherit;
-object-fit: cover;
+padding: 20px 0;
+height: 150px;
+object-fit: contain;
 opacity: 0.35;
 transition: 0.5s;
 }
 
 .PlayerCard:hover .CardFront img{
     opacity: 1;
+}
+
+.CardBack .NamePos{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.CardBack .NamePos .Name{
+    width: 40%;
+}
+
+.CardBack .NamePos .Pos{
+    width: 40%;
+}
+
+.CardBack .NamePos .vDivider{
+    padding: auto 10px;
+    width: 2px;
+    border-right: 2px solid black;
+    opacity: 0.3;
+}
+
+.CardBack .divider{
+    margin: auto 5px;
+    height: 2px;
+    border-bottom: 2px solid black;
+    opacity: 0.3;
 }
 
 

@@ -13,6 +13,8 @@ class Player extends Component {
 
     render() {
 
+        console.log(this.props.info);
+
         let contentStyle = "CardContent";
         let cardStyle = "PlayerCard";
 
@@ -31,7 +33,18 @@ class Player extends Component {
                         </div>
                     </div>
                     <div className="CardBack">
-                        <h1>John Doe</h1>
+                        <div className="NamePos">
+                            <div className="Name">
+                                <p>NAME</p>
+                                <p><strong>{this.props.info['DraftKingsName']}</strong></p>
+                            </div>
+                            <div className="vDivider"></div>
+                            <div className="Pos">
+                                <p>POSITION</p>
+                                <p><strong>{this.props.info['DepthChartPosition']}</strong></p>
+                            </div>
+                        </div>
+                        <div className="divider"></div>
                         <p>Architect Engineer</p>
                         <p>We love that guy</p>
                     </div>
