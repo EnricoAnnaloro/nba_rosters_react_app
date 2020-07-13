@@ -7,11 +7,17 @@
 }
 
 .RosterPage .TeamName{
+    width: 100%;
     margin: auto;
     padding: 0;
     font-family: 'Permanent Marker', cursive;
     font-size: 100px;
     letter-spacing: 2px;
+}
+
+.RosterPage .TeamName p{
+    margin: auto;
+    width: 40%;
     animation: pulse 2s infinite ease-in-out;
 }
 

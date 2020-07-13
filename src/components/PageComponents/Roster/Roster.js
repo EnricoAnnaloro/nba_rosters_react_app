@@ -78,7 +78,11 @@ class Roster extends Component {
 
         return (
             <div className="RosterPage" style={backgroundStyle}>
-                <div className="TeamName" style={teamNameStyle}>{this.state.team['Name']}</div>
+                <div className="TeamName" style={teamNameStyle}>
+                    <p>
+                        {this.state.team['Name']}
+                    </p>
+                </div>
                 <div className="Roster">
                     <div className="col">
                         {col1_players}                
