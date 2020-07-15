@@ -1,18 +1,17 @@
 .ScrollToTop{
     position: fixed;
     bottom: 15%;
-    left: 87%;
+    left: 84%;
     text-align: center;
-    display: none;
 }
 
 .ScrollToTop .fas{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
+    font-size: 20px;
     border-radius: 100%;
     background-color: white;
     text-align: center;
@@ -26,6 +25,7 @@
     font-size: 15px;
     font-weight: bolder;
     cursor: default;
+    display: none;
 }
 
 @keyframes scrollUp{
@@ -39,8 +39,20 @@
 
 @media (min-width: 768px){
     .ScrollToTop{
-        display: block;
+        bottom: 15%;
         left: 85%;
+        text-align: center;
+    }
+
+    
+    .ScrollToTop .fas{
+        width: 80px;
+        height: 80px;
+        font-size: 60px;
+    }
+
+    .ScrollToTop p{
+        display: block;
     }
 }
 
