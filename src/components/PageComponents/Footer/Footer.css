@@ -1,0 +1,75 @@
+.Footer{
+    width: 100%;
+    height: 13vh;
+    background-color: black;
+    color: white;
+}
+
+.Footer ul{
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.Footer ul a{
+    color: orange;
+    cursor: pointer;
+    font-size: 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.Footer ul a:hover { 
+    /* animation: shake 0.5s ease; */
+    color: white;
+    transform: scale(1.3, 1.3);
+}
+
+.Footer ul li i{
+    font-size: 25px;
+}
+
+/* @keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg) }
+} */
+
+@media(min-width: 500px){
+    .Footer ul a{
+        font-size: 20px;
+    }
+
+    .Footer ul li i{
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px){
+    .Footer ul a{
+        font-size: 30px;
+    }
+
+    .Footer ul li i{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1200px){
+    .NavBar .Title{
+        font-size: 50px;
+    }
+}

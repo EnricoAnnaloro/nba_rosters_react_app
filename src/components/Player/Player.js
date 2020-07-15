@@ -45,11 +45,16 @@ class Player extends Component {
                             </Link>);
 
         if(this.props.isFromSearch){
-            bottonSection = (<Link to={"/" + this.props.info['Team']} style={{ textDecoration: 'none' }}>
+            bottonSection = (<Link to={"/" + team} style={{ textDecoration: 'none' }}>
                                 <button>
-                                    <img src={this.props.logo} alt="xxx"></img>
+                                    <strong>Full {team} Roster</strong>
                                 </button>
                             </Link>);
+        }
+
+        let birthCity = null;
+        if(this.props.info['BirthCity']){
+            birthCity = this.props.info['BirthCity'] + ", " + this.props.info['BirthState'];
         }
 
         return (
@@ -70,7 +75,7 @@ class Player extends Component {
                             <div className="vDivider"></div>
                             <div className="Pos">
                                 <p>POSITION</p>
-                                <p><strong>{this.props.info['DepthChartPosition']}</strong></p>
+                                <p><strong>{this.props.info['Position']}</strong></p>
                             </div>
                         </div>
                         <div className="divider"></div>
@@ -85,7 +90,7 @@ class Player extends Component {
                             <div className="Pos">
                                 <p>BORN</p>
                                 <p><strong>{birthDate}</strong></p>
-                                <p>{this.props.info['BirthCity']}, {this.props.info['BirthState']}</p>
+                                <p>{birthCity}</p>
                             </div>
                         </div>
                         <div className="divider"></div>

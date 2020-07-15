@@ -1,0 +1,67 @@
+.NavBar{
+    height: 7vh;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.NavBar .Title{
+    color: orange;
+    font-size: 16px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.NavBar .Title span{
+    margin-right: 10px;
+}
+
+.NavBar i{
+color: orange;
+font-size: 16px;
+padding: 5px;
+border: 1px solid orange;
+border-radius: 10%;
+transition: 0.2s;
+}
+
+.NavBar i:hover{
+color: white;
+border: 1px solid white;
+transform: scale(1.1, 1.1);
+}
+
+@media(min-width: 500px){
+    .NavBar .Title{
+        font-size: 30px;
+    }
+
+    .NavBar i{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px){
+    .NavBar .Title{
+        font-size: 40px;
+    }
+
+    .NavBar i{
+        font-size: 30px;
+    }
+
+    .NavBar .Title span{
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1200px){
+    .NavBar .Title{
+        font-size: 50px;
+    }
+
+    .NavBar .Title span{
+        margin-right: 30px;
+    }
+}

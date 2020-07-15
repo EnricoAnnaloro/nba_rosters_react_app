@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
 import {Link} from 'react-router-dom'
-
 import Team from './Team/Team'
-
 import './Teams.css'
+
+const API_KEY = `${process.env.REACT_APP_NBA_API_KEY}`
 
 class Teams extends Component {
 
@@ -14,8 +14,12 @@ class Teams extends Component {
     }
 
     componentDidMount() {
-        const teamsReq = Axios.get('https://api.sportsdata.io/v3/nba/scores/json/teams?key=f6416fdce5e1433cb10eaf9ce9488d60');
-        const statsReq = Axios.get('https://api.sportsdata.io/v3/nba/scores/json/Standings/2020?key=f6416fdce5e1433cb10eaf9ce9488d60');
+
+        const teamURL = 'https://api.sportsdata.io/v3/nba/scores/json/teams?key=' + API_KEY;
+        const statsURL = 'https://api.sportsdata.io/v3/nba/scores/json/Standings/2020?key=' + API_KEY;
+
+        const teamsReq = Axios.get(teamURL);
+        const statsReq = Axios.get(statsURL);
 
         Axios.all([teamsReq, statsReq])
             .then( Axios.spread((...responses) => {

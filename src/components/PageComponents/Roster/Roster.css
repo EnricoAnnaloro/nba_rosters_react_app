@@ -11,14 +11,14 @@
     margin: auto;
     padding: 0;
     font-family: 'Permanent Marker', cursive;
-    font-size: 100px;
+    font-size: 40px;
     letter-spacing: 2px;
 }
 
 .RosterPage .TeamName p{
     margin: auto;
-    width: 40%;
-    animation: pulse 2s infinite ease-in-out;
+    width: 60%;
+    /* animation: pulse 2s infinite ease-in-out; */
 }
 
 .RosterPage .Roster{
@@ -28,6 +28,12 @@
 .RosterPage .Roster .col{
     width: 100%;
     margin: 20px 0;
+}
+
+@media(min-width: 768px){
+    .RosterPage .TeamName{
+        font-size: 60px;
+    }
 }
 
 @media(min-width: 1024px){
@@ -44,7 +50,7 @@
     }
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
     0% {
         transform: scale(1, 1);
     }
@@ -54,4 +60,4 @@
     100% {
         transform: scale(1, 1);
     }
-  }
+} */

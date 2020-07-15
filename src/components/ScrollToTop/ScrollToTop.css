@@ -1,0 +1,68 @@
+.ScrollToTop{
+    position: fixed;
+    bottom: 15%;
+    left: 87%;
+    text-align: center;
+    display: none;
+}
+
+.ScrollToTop .fas{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border-radius: 100%;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    animation: scrollUp 0.5s alternate ease-in-out infinite;
+}
+
+.ScrollToTop p{
+    margin-top: 1px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: default;
+}
+
+@keyframes scrollUp{
+    from{
+        transform: translateY(-2px);
+    }
+    to{
+        transform: translateY(2px);
+    }
+}
+
+@media (min-width: 768px){
+    .ScrollToTop{
+        display: block;
+        left: 85%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1024px){
+
+    .ScrollToTop{
+        left: 90%;
+    }
+
+    .ScrollToTop i{
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+
+    .ScrollToTop p{
+        font-size: 15px
+    }
+}
+
+@media (min-width: 1400px){
+    .ScrollToTop{
+        left: 88%;
+    }
+}

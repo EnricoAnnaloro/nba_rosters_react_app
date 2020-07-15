@@ -159,18 +159,12 @@ transition: 0.5s;
     height: 60px;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10%;
+    background-color: rgba(64, 192, 64, 0.7);
+    border-radius: 8%;
     border: none;
+    font-size: 20px;
     transition: 0.5s;
     cursor: pointer;
-}
-
-.CardBack .TeamInfo button img{
-    width: inherit;
-    margin: 0;
-    height: 50px;
-    object-fit: cover;
 }
 
 .CardBack .TeamInfo button:hover{

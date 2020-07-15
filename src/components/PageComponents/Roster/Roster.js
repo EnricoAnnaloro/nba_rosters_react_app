@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
 import Player from '../../Player/Player'
-
 import './Roster.css'
+
+const API_KEY = `${process.env.REACT_APP_NBA_API_KEY}`
 
 class Roster extends Component {
 
@@ -14,9 +15,9 @@ class Roster extends Component {
 
     componentDidMount() {
 
-        const rosterURL = "https://api.sportsdata.io/v3/nba/stats/json/Players/" + this.props.match.params.teamName + "?key=f6416fdce5e1433cb10eaf9ce9488d60";
-        const statsURL = "https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByTeam/2020/" + this.props.match.params.teamName + "?key=f6416fdce5e1433cb10eaf9ce9488d60";
-        const teamsURL = "https://api.sportsdata.io/v3/nba/scores/json/teams?key=f6416fdce5e1433cb10eaf9ce9488d60";
+        const rosterURL = "https://api.sportsdata.io/v3/nba/stats/json/Players/" + this.props.match.params.teamName + "?key=" + API_KEY;
+        const statsURL = "https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByTeam/2020/" + this.props.match.params.teamName + "?key=" + API_KEY;
+        const teamsURL = "https://api.sportsdata.io/v3/nba/scores/json/teams?key=" + API_KEY;
 
         const rosterReq = Axios.get(rosterURL);
         const statsReq = Axios.get(statsURL);

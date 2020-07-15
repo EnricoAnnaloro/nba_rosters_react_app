@@ -33,6 +33,12 @@
     margin-bottom: 40px;
 }
 
+@media (min-width: 1200px) and (max-width: 1405px){
+    .Teams h2{
+        font-size: 33px;
+    }
+}
+
 @media (min-width: 1200px){
     .TeamsPage .Teams{
         display: flex;
