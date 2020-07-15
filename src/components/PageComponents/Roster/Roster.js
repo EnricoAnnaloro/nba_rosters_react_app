@@ -46,15 +46,13 @@ class Roster extends Component {
     }
     
     render() {
-
-        console.log(this.state.team);
                 
         const backgroundStyle = this.setUpBackgroundStyle();
 
         const col1_players = this.state.roster.map( player => {
             const playerStats = this.state.stats.find( stats => stats['PlayerID'] === player['PlayerID'])
             if(this.state.roster.findIndex(toFind => toFind['PlayerID'] === player['PlayerID']) < (this.state.roster.length/2) ){
-                return <Player info={player} logo={this.state.team['WikipediaLogoUrl']} stats={playerStats} isFromSearch={false} key={player['PlayerID']}/>
+                return <Player info={player} logo={this.state.team['WikipediaLogoUrl']} stats={playerStats} isFromSearch={false} key={player['PlayerID']} url={this.props.match.url}/>
             } else {
                 return null;
             }
@@ -63,7 +61,7 @@ class Roster extends Component {
         const col2_players = this.state.roster.map( player => {
             const playerStats = this.state.stats.find( stats => stats['PlayerID'] === player['PlayerID'])
             if(this.state.roster.findIndex(toFind => toFind['PlayerID'] === player['PlayerID']) >= (this.state.roster.length/2) ){
-                return <Player info={player} logo={this.state.team['WikipediaLogoUrl']} stats={playerStats} isFromSearch={false} key={player['PlayerID']}/>
+                return <Player info={player} logo={this.state.team['WikipediaLogoUrl']} stats={playerStats} isFromSearch={false} key={player['PlayerID']} url={this.props.match.url}/>
             } else {
                 return null;
             }

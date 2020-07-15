@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Footer from './components/PageComponents/Footer/Footer'
 import NavBar from './components/PageComponents/NavBar/NavBar'
 import SearchPage from './components/PageComponents/SearchPage/SearchPage'
+import FullStatsPage from './components/PageComponents/FullStatsPage/FullStatsPage'
 
 import './App.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route path="/search" exact component={SearchPage} />    
+            <Route path="/:teamName/:playerID" component={FullStatsPage} />    
             <Route path="/:teamName" component={Roster} />    
           </Switch>
           <Route path="/" exact component={Teams} />

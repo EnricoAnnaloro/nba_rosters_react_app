@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import './Player.css'
 
@@ -27,7 +27,8 @@ class Player extends Component {
             birthDate = this.props.info['BirthDate'].slice(0, 10);
         }
 
-        let ppg, apg, rpg, bpg, spg, games, team = null;
+        let ppg, apg, rpg, bpg, spg, games = null;
+        let team = "";
         if(this.props.stats){
             team = this.props.stats["Team"];
             games = this.props.stats['Games'];
@@ -38,18 +39,25 @@ class Player extends Component {
             spg = (this.props.stats['Steals']/games).toFixed(2);
         }
 
-        let bottonSection = (<Link to={"/"}>
+        let bottonSection = (<Link to={this.props.url + "/" + this.props.info['PlayerID']}>
                                 <button>
                                     <strong>Full Stats</strong>
                                 </button>
                             </Link>);
 
         if(this.props.isFromSearch){
-            bottonSection = (<Link to={"/" + team} style={{ textDecoration: 'none' }}>
-                                <button>
-                                    <strong>Full {team} Roster</strong>
-                                </button>
-                            </Link>);
+            bottonSection = (<Fragment>
+                                <Link to={"/" + team} style={{ textDecoration: 'none' }}>
+                                    <button style={{width: "120px"}}>
+                                        <strong>{team ? "Full " + team + " Roster" : "Not available"}</strong>
+                                    </button>
+                                </Link>
+                                <Link to={"/" + team + "/" + this.props.info['PlayerID']} style={{ textDecoration: 'none' }}>
+                                    <button style={{width: "120px"}}>
+                                        <strong>Full Stats</strong>
+                                    </button>
+                                </Link>
+                            </Fragment>);
         }
 
         let birthCity = null;

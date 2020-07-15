@@ -67,7 +67,7 @@ class SearchPage extends Component {
 
         return (
             <div className="SearchPage">
-                <input type="text" placeholder="Search.." value={this.state.search} onChange={this.handleChange}></input>
+                <input type="text" placeholder="Search.." value={this.state.search} onChange={this.handleChange} autoFocus ></input>
                 <div className="Roster">
                     <div className="col">
                         {playersSearchedLeft}

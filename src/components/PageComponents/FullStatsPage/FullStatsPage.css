@@ -1,0 +1,94 @@
+.FullStatsPage{
+    width: 100%;
+    height: 78vh;
+    background: linear-gradient(90deg, rgba(254,127,45,1) 0%, rgba(65,65,221,1) 50%, rgba(97,155,138,1) 100%);
+}
+
+.FullStatsPage .PlayerPhoto{
+    width: 100%;
+    height: 15%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlayerPhoto img{
+    height: 100%;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(187, 187, 187, 0.7);
+    border-radius: 30%;
+    object-fit: contain;
+}
+
+.FullStatsPage .StatsContainer{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    background-color: rgba(187, 187, 187, 0.7);
+    border-radius: 3%;
+    text-align: center;
+    overflow: auto;
+}
+
+.StatsContainer h1{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.StatsContainer .Stats{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Stats .Stat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Stat .LeftCol{
+    width: 30%;
+}
+
+.Stat .Vseparation{
+    width: 2%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);;
+    height: 90%;
+}
+
+.Stat .RightCol{
+    width: 68%;
+}
+
+.StatsContainer::-webkit-scrollbar {
+    width: 10px;
+    position: fixed;
+    bottom: 10%;
+}
+
+.StatsContainer::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.StatsContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+.StatsContainer{
+    -ms-overflow-style: none;
+}
+
+@media (min-width: 769px){
+    .FullStatsPage .StatsContainer{
+        width: 60%;
+    }
+}
