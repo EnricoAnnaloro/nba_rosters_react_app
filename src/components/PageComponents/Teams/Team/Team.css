@@ -50,23 +50,6 @@
 
 }
 
-.Team:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-.Team:hover .TeamName {
-    opacity: 0;
-}
-
-.Team:hover .TeamSeed {
-    opacity: 0;
-}
-
-.Team:hover .TeamLogo img {
-    opacity: 1;
-}
-
 @media (min-width: 500px){
     .Team .TeamName {
         font-size: 30px;
@@ -95,8 +78,27 @@
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1024px){
+    .Team .TeamLogo img {
+        opacity: 0.35;
+    }
 
+    .Team:hover {
+        transform: scale(0.9, 0.9);
+        box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+    }
+
+    .Team:hover .TeamName {
+        opacity: 0;
+    }
+    
+    .Team:hover .TeamSeed {
+        opacity: 0;
+    }
+    
+    .Team:hover .TeamLogo img {
+        opacity: 1;
+    }
 }
 
 
